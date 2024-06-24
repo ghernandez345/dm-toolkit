@@ -1,10 +1,19 @@
-import { useState } from "react";
+import { getPlayerCharacters } from "./entities/playerCharacter";
+
+import PlayerCharacterCard from "./PlayerCharacterCard/PlayerCharacterCard";
 
 function App() {
+  const testCharacters = getPlayerCharacters();
+
   return (
-    <>
-      <h1>Test</h1>
-    </>
+    <div className="p-6">
+      {testCharacters.map((playerCharacter) => (
+        <PlayerCharacterCard
+          key={playerCharacter.name}
+          playerCharacter={playerCharacter}
+        />
+      ))}
+    </div>
   );
 }
 
