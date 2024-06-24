@@ -7,12 +7,14 @@ function App() {
 
   return (
     <div className="p-6">
-      {testCharacters.map((playerCharacter) => (
-        <PlayerCharacterCard
-          key={playerCharacter.name}
-          playerCharacter={playerCharacter}
-        />
-      ))}
+      <>
+        {testCharacters.map((playerCharacter) => (
+          <PlayerCharacterCard
+            key={playerCharacter.name}
+            playerCharacter={playerCharacter}
+          />
+        ))}
+      </>
     </div>
   );
 }
