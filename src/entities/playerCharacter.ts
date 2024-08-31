@@ -27,3 +27,7 @@ export const getPlayerCharacters = (): PlayerCharacter[] => {
     },
   ];
 };
+
+export const createPlayerCharacter = (newPC: PlayerCharacter) => {
+  return { avatarSrc: "https://via.placeholder.com/100", ...newPC };
+};

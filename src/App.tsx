@@ -33,7 +33,7 @@ function App() {
       </>
 
       <NewPCForm />
-      <ActionsButton />
+      {/* <ActionsButton /> */}
     </div>
   );
 }

@@ -12,9 +12,7 @@ interface NewPCFromFields {
   passiveInsight: number;
 }
 
-interface NewPCFormProps {}
-
-const NewPCForm = ({}: NewPCFormProps) => {
+const NewPCForm = () => {
   const { register, handleSubmit } = useForm<NewPCFromFields>();
 
   const onSubmit: SubmitHandler<NewPCFromFields> = (data) => {
@@ -23,8 +21,12 @@ const NewPCForm = ({}: NewPCFormProps) => {
 
   return (
     <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
-      <label htmlFor="name">Character Name</label>
-      <input type="text" id="name" {...register("name")} />
+      <label htmlFor="name">Character Name *</label>
+      <input
+        type="text"
+        id="name"
+        {...(register("name"), { required: true })}
+      />
       <label htmlFor="race">Race</label>
       <input type="text" id="race" {...register("race")} />
       <label htmlFor="class">Class</label>
