@@ -1,8 +1,11 @@
 import express from "express";
 
 import charactersRouter from "./routes/characters";
+import { createDatabase } from "./db";
 
 const app = express();
+
+export const db = createDatabase();
 
 // server config
 const port = 3000;

@@ -1,5 +1,7 @@
 import express from "express";
 
+import { db } from "../index";
+
 const router = express.Router();
 
 router
