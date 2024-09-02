@@ -8,10 +8,16 @@
     "server": "nodemon --watch src/server --ext ts --exec 'tsx ./src/server/index.ts'",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "db:create": "db-migrate db:create",
+    "db:up": "db-migrate up",
+    "db:down": "db-migrate down",
+    "db:reset": "db-migrate reset"
   },
   "dependencies": {
     "classnames": "^2.5.1",
+    "db-migrate": "^0.11.14",
+    "db-migrate-mysql": "^3.0.0",
     "express": "^4.19.2",
     "mysql": "^2.18.1",
     "react": "^18.2.0",
@@ -29,7 +35,6 @@
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.19",
-    "db-migrate": "^0.11.14",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-react": "^7.34.2",

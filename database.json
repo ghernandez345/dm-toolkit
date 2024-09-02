@@ -5,6 +5,7 @@
     "user": "root",
     "password": "",
     "database": "dm_toolkit",
+    "port": 3306,
     "multipleStatements": true
   }
 }
