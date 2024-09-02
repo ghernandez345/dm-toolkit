@@ -1,6 +1,6 @@
 import express from "express";
 
-import charactersRouter from "./routes/characters";
+import charactersRouter from "./routes/playerCharacters";
 import { createDatabase } from "./db";
 
 const app = express();
