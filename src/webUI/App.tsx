@@ -21,8 +21,16 @@ import PlayerCharacterCard from "./PlayerCharacterCard/PlayerCharacterCard";
 function App() {
   const testCharacters = getPlayerCharacters();
 
-  return (
-    <div className="min-h-screen p-6">
+  const onClickAddCharacter = () => {
+    console.log("add character");
+  };
+
+  const renderContent = () => {
+    if (testCharacters.length === 0) {
+      return <p>No characters. Please add characters</p>;
+    }
+
+    return (
       <>
         {testCharacters.map((playerCharacter) => (
           <PlayerCharacterCard
@@ -31,8 +39,14 @@ function App() {
           />
         ))}
       </>
+    );
+  };
 
+  return (
+    <div className="min-h-screen p-6">
+      <>{renderContent()}</>
       <NewPCForm />
+      <button onClick={onClickAddCharacter}>Add Character</button>
       {/* <ActionsButton /> */}
     </div>
   );
